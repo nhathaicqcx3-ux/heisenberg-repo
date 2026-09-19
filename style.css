@@ -1,0 +1,215 @@
+:root {
+    --bg-color: #fff0f3;
+    --card-bg: #ffffff;
+    --card-border: #fcc2d7;
+    --text-primary: #5c061c;
+    --text-secondary: #a61e4d;
+    --primary-color: #e63946;
+    --primary-hover: #c9184a;
+    --btn-bg: #fff5f7;
+    --btn-border: #ffb3c1;
+    --badge-bg: #ffe3e8;
+    --badge-text: #c9184a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.profile-section {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.logo-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #4a0415;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.badge {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge i {
+    font-size: 8px;
+}
+
+.theme-toggle {
+    background: #ffffff;
+    border: 1px solid var(--btn-border);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 12px rgba(255, 179, 193, 0.15);
+}
+
+.card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #800f2f;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+}
+
+.copy-box {
+    background: #fff5f7;
+    border: 1px solid var(--btn-border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    margin-bottom: 16px;
+}
+
+.copy-box input, .bank-info {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+}
+
+.btn-copy {
+    background: #ffccd5;
+    color: #a61e4d;
+    border: 1px solid #ffb3c1;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 10px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-outline {
+    border: 1px solid var(--btn-border);
+    background: var(--btn-bg);
+    color: #800f2f;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.span-2 {
+    grid-column: span 1;
+}
+
+.info-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.info-card .desc {
+    color: var(--text-secondary);
+}
+
+.contact-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEISENBERG REPO - Kho Tweak & IPA Việt Hóa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="profile-section">
+                <!-- SVG Logo HEISENBERG (Chữ HSB) -->
+                <div class="logo-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                        <defs>
+                            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ff3b60" />
+                                <stop offset="100%" stop-color="#990026" />
+                            </linearGradient>
+                            <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#ffe6eb" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="25" y="25" width="450" height="450" rx="100" fill="url(#bgGrad)" />
+                        <rect x="45" y="45" width="410" height="410" rx="80" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="6" />
+                        <text x="250" y="280" font-family="-apple-system, sans-serif" font-size="120" font-weight="900" fill="url(#textGrad)" text-anchor="middle" letter-spacing="1">HSB</text>
+                        <path d="M 130 330 L 370 330" stroke="#ffb3c1" stroke-width="8" stroke-linecap="round" />
+                    </svg>
+                </div>
+                
+                <div class="profile-info">
+                    <h1>HEISENBERG</h1>
+                    <p class="subtitle">Kho tweak Crack – Việt Hoá</p>
+                    <span class="badge"><i class="fa-solid fa-circle"></i> JAILBREAK • CÔNG NGHỆ</span>
+                </div>
+            </div>
+            <button class="theme-toggle">
+                <i class="fa-regular fa-sun"></i> Đang dùng Light mode
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="content-grid">
+            <!-- Cột Trái -->
+            <section class="column">
+                <div class="card">
+                    <h2 class="card-title">ĐƯỜNG DẪN REPO</h2>
+                    <div class="copy-box">
+                        <input type="text" id="repoUrl" readonly>
+                        <button onclick="copyRepoLink()" class="btn-copy">
+                            <i class="fa-regular fa-paste"></i> Sao chép
+                        </button>
+                    </div>
+
+                    <div class="buttons-grid">
+                        <a id="cydiaBtn" href="#" class="btn btn-outline">
+                            <i class="fa-solid fa-folder"></i> Thêm vào Cydia
+                        </a>
+                        <a id="sileoBtn" href="#" class="btn btn-primary">
+                            <i class="fa-solid fa-bolt"></i> Thêm vào Sileo
+                        </a>
+                        <a id="zebraBtn" href="#" class="btn btn-outline">
+                            <i class="fa-solid fa-horse"></i> Thêm vào Zebra
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fa-solid fa-box"></i> Repo Roothide
+                        </a>
+                        <a href="#" class="btn btn-outline span-2">
+                            <i class="fa-solid fa-mobile-screen"></i> Kho IPA
+                        </a>
+                        <a href="#" class="btn btn-outline span-2">
+                            <i class="fa-solid fa-vial"></i> File Tiêm – TrollFools
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cột Phải -->
+            <section class="column">
+                <div class="card info-card">
+                    <h2 class="card-title">THÔNG TIN LIÊN HỆ</h2>
+                    <p><strong>Repo được phát triển bởi:</strong> Heisenberg Team</p>
+                    <p class="desc">Kho lưu trữ các Tweak Việt hoá cho cộng đồng Jailbreak.</p>
+                    
+                    <p><strong>Hỗ trợ:</strong> Bug, góp ý, yêu cầu tính năng mới.</p>
+                    <p><strong>Tình trạng:</strong> Đang cập nhật tweak cho iOS 15–16 (rootless).</p>
+                    
+                    <div class="contact-links">
+                        <p>Email: <a href="mailto:heisenberg@repo.com">heisenberg@repo.com</a></p>
+                        <p>Telegram: <a href="#">Nhóm hỗ trợ Heisenberg</a></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">ỦNG HỘ (DONATE)</h2>
+                    <div class="copy-box">
+                        <span class="bank-info">STK: <strong>900959999</strong></span>
+                        <button onclick="copyBank()" class="btn-copy">
+                            <i class="fa-regular fa-paste"></i> Sao chép
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const currentDomain = window.location.href;
+        document.getElementById('repoUrl').value = currentDomain;
+
+        document.getElementById('sileoBtn').href = `sileo://source/${currentDomain}`;
+        document.getElementById('cydiaBtn').href = `cydia://url/https://cydia.saurik.com/api/share#?source=${currentDomain}`;
+        document.getElementById('zebraBtn').href = `zebra://sources/add/${currentDomain}`;
+
+        function copyRepoLink() {
+            const input = document.getElementById('repoUrl');
+            navigator.clipboard.writeText(input.value);
+            alert("Đã sao chép liên kết Repo Heisenberg: " + input.value);
+        }
+
+        function copyBank() {
+            navigator.clipboard.writeText("900959999");
+            alert("Đã sao chép STK!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Package: com.heisenberg.autotouch
+Name: AutoTouch Viet Hoa
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Tweak tu dong thao tac tren man hinh
+Maintainer: Heisenberg Team
+Author: Heisenberg
+Section: Tweaks
+Filename: debs/autotouch.deb
+Size: 102400
