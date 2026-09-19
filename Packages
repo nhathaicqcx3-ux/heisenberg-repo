@@ -8,3 +8,13 @@ Author: Heisenberg
 Section: Tweaks
 Filename: debs/autotouch.deb
 Size: 102400
+Package: com.heisenberg.appstoreplus
+Name: AppStore Plus Viet Hoa
+Version: 1.2.0
+Architecture: iphoneos-arm64
+Description: Tweak ho tro downgade app tren AppStore
+Maintainer: Heisenberg Team
+Author: Heisenberg
+Section: Tweaks
+Filename: debs/appstoreplus.deb
+Size: 154000
